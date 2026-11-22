@@ -35,3 +35,34 @@ Thumbs.db
 # Internal project notes
 README-TU-SATHI-FIXES.md
 SECURITY-DEPLOYMENT-GUIDE.md
+# Environment files and secrets
+.env
+.env.*
+*.env
+**/.env
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Private uploads
+/uploads/
+/Backend/uploads/
+/backend-Mongodb/uploads/
+
+# Runtime data
+/Backend/data/
+/backend-Mongodb/data-cache/
+*.log
+*.tmp
+*.bak
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Internal documentation
+README-TU-SATHI-FIXES.md
+SECURITY-DEPLOYMENT-GUIDE.md
