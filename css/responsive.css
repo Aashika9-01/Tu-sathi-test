@@ -1,0 +1,362 @@
+/* =========================================
+   STICKY FOOTER
+   ========================================= */
+
+html,
+body{
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+main{
+    flex:1;
+}
+
+footer{
+    margin-top:auto;
+}
+
+
+/* =========================================
+   RESPONSIVE — LARGE TABLETS
+   ========================================= */
+
+@media(max-width:1050px){
+
+    .course-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .subject-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .course-banner .stats{
+        display:none;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .viewer-grid{
+        grid-template-columns:290px 1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLETS / MOBILE
+   ========================================= */
+
+@media(max-width:720px){
+
+    .container{
+        width:min(100% - 32px,560px);
+    }
+
+    .nav{
+        height:64px;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
+        height:auto;
+        background:var(--navy);
+        padding:10px 16px;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:12px;
+    }
+
+    .nav-links a.active:after{
+        display:none;
+    }
+
+    .nav-actions .login{
+        display:none;
+    }
+
+    .nav-actions .mode{
+        font-size:0;
+        border:0;
+        padding:5px;
+    }
+
+    .nav-actions .mode .theme-icon{
+        font-size:21px;
+    }
+
+    .hamb{
+        display:block;
+    }
+
+    .hero{
+        padding-top:26px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-art{
+        height:190px;
+    }
+
+    .notices-link{
+        top:0;
+        right:0;
+    }
+
+    .books{
+        font-size:110px;
+    }
+
+    .bubble{
+        width:190px;
+        height:190px;
+    }
+
+    .hero .stat-row,
+    .stat-row{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat{
+        border:0;
+        padding:7px;
+    }
+
+
+    /* ==============================
+       COURSE CARDS
+       ============================== */
+
+    .course-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .course-card{
+        padding:14px;
+        min-height:142px;
+    }
+
+    .course-card .icon{
+        width:42px;
+        height:42px;
+        font-size:21px;
+    }
+
+
+    /* ==============================
+       FEATURES
+       ============================== */
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature{
+        border:0;
+        padding:10px;
+    }
+
+
+    /* ==============================
+       COURSE / SUBJECT LAYOUT
+       ============================== */
+
+    .content-grid,
+    .viewer-grid,
+    .form-layout{
+        grid-template-columns:1fr;
+    }
+
+
+    /* Keep semester selector visible */
+    .sidebar{
+        display:block;
+        width:100%;
+        min-width:0;
+    }
+
+
+    .course-banner{
+        gap:15px;
+        padding:18px;
+    }
+
+    .course-banner h1{
+        font-size:21px;
+    }
+
+
+    /* ==============================
+       SUBJECT GRID
+       ============================== */
+
+    .subject-grid{
+        grid-template-columns:1fr 1fr;
+        padding:8px;
+    }
+
+
+    /* ==============================
+       FORMS
+       ============================== */
+
+    .donation-grid,
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    /* ==============================
+       FOOTER
+       ============================== */
+
+    .footer-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:24px;
+    }
+
+    .footer-grid>div{
+        min-width:0;
+    }
+
+    .footer li,
+    .footer p{
+        overflow-wrap:anywhere;
+    }
+
+    .footer-support{
+        border:0;
+        padding:0;
+    }
+
+    .copyright{
+        display:block;
+    }
+
+
+    /* ==============================
+       SUBJECT TABS
+       ============================== */
+
+    .tabs{
+        gap:18px;
+        overflow:auto;
+    }
+
+
+    /* ==============================
+       PDF VIEWER
+       ============================== */
+
+    .pdf-frame iframe{
+        height:420px;
+    }
+
+
+    /* ==============================
+       ANNOUNCEMENT
+       ============================== */
+
+    .announcement{
+        gap:12px;
+        padding:14px;
+    }
+
+    .announcement span{
+        display:none;
+    }
+
+    .announcement-entry{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .announcement-entry .btn{
+        width:100%;
+    }
+
+
+    /* ==============================
+       MOBILE SEMESTER SELECTOR
+       ============================== */
+
+    .period-list{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        overflow-x:auto;
+        gap:8px;
+        padding-bottom:5px;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .period-list::-webkit-scrollbar{
+        display:none;
+    }
+
+    .semester-link{
+        flex:0 0 auto;
+        white-space:nowrap;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — SMALL PHONES
+   ========================================= */
+
+@media(max-width:420px){
+
+    .course-grid,
+    .subject-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .hero .stat-row{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .course-card{
+        min-height:auto;
+    }
+
+
+    /* Smaller semester buttons */
+
+    .semester-link{
+        min-width:82px;
+        padding:9px 10px;
+        font-size:12px;
+    }
+
+}

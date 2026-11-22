@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<script>
+(function(){
+
+    const theme = localStorage.getItem("studyhub-theme");
+
+    if(theme === "dark"){
+        document.documentElement.classList.add("dark");
+    }
+
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title data-page-title>TU Sathi</title>
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/course.css">
+<link rel="stylesheet" href="css/darkmode.css">
+
+</head>
+
+<body data-page="course">
+
+<header data-header></header>
+
+<main class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" data-breadcrumb>
+
+        <span>Home</span>
+        <span>›</span>
+        <span>Courses</span>
+
+    </nav>
+
+
+    <!-- Course Header -->
+    <section class="course-banner panel">
+
+        <div class="course-info">
+
+            
+
+            <div class="course-details">
+
+                <h1 data-course-name>
+                    Loading Course...
+                </h1>
+
+                <p
+                    class="course-fullname"
+                    data-course-fullname>
+                </p>
+
+                <p
+                    class="course-description"
+                    data-course-description>
+                    Loading course description...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Course Content -->
+    <div class="content-grid">
+
+
+        <!-- Period Selector -->
+        <aside class="sidebar panel">
+
+            <div class="period-selector">
+
+                <h3 data-period-heading>
+                    Select Period
+                </h3>
+
+                <div
+                    class="period-list"
+                    data-semesters>
+                </div>
+
+            </div>
+
+
+            <!-- Contribution -->
+            <div class="contribute-mini">
+
+                <h4>
+                    💡 Can't find your notes?
+                </h4>
+
+                <p>
+                    Contribute notes and help other students.
+                </p>
+
+                <a
+                    href="contribute.html"
+                    class="btn">
+                    Contribute Notes
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Subjects -->
+        <section class="subjects-container panel">
+
+            <div class="subject-heading">
+
+                <h2
+                    class="section-title"
+                    data-subject-heading>
+                    Subjects
+                </h2>
+
+                <p>
+                    Select a subject to view notes,
+                    syllabus and final board question papers.
+                </p>
+
+            </div>
+
+
+            <div
+                class="subject-grid"
+                data-subjects>
+            </div>
+
+
+            <!-- Empty State -->
+            <div
+                class="empty-state"
+                data-empty-state
+                hidden>
+
+                <h3>
+                    No subjects available
+                </h3>
+
+                <p>
+                    Content will be added soon.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer data-footer></footer>
+
+
+<script src="js/app.js"></script>
+<script src="js/course.js"></script>
+
+</body>
+
+</html>

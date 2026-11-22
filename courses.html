@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <script>
+(function(){
+
+    const theme = localStorage.getItem("studyhub-theme");
+
+    if(theme === "dark"){
+
+        document.documentElement.classList.add("dark");
+
+    }
+
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-page-title>Courses | TU Sathi</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="courses">
+
+<header data-header></header>
+
+<main class="container section">
+
+    <section class="page-header">
+
+        <h1 class="section-title" data-page-title-text>
+            Explore All Courses
+        </h1>
+
+        <p class="section-lead" data-page-description>
+            Find your programme and start learning with verified resources.
+        </p>
+
+    </section>
+
+
+    <section class="course-section">
+
+        <div class="course-grid" data-courses>
+            <!-- Dynamic courses rendered by JavaScript -->
+        </div>
+
+
+        <div class="empty-state" data-empty-state hidden>
+
+            <h3>No Courses Available</h3>
+
+            <p>
+                Courses will be added soon.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer data-footer></footer>
+
+
+<script src="js/app.js"></script>
+<script src="js/courses.js"></script>
+
+</body>
+
+</html>

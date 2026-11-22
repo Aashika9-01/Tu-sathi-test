@@ -1,0 +1,1421 @@
+/* =========================================================
+   STUDYHUB NEPAL
+   ABOUT PAGE
+   FULL RESPONSIVE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE FOUNDATION
+   ========================================================= */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+
+/*
+   
+*/
+
+main.about-page {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-height: 0;
+
+    margin: 0;
+    padding: 42px 0 55px;
+
+    box-sizing: border-box;
+
+    background: var(--bg-color, #f1eeea);
+    color: var(--text-color, #17212b);
+
+    overflow: visible;
+}
+
+.about-container {
+    width: min(1180px, calc(100% - 40px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ABOUT HEADER / FOOTER
+   ABOUT PAGE ONLY
+   ========================================================= */
+
+/*
+   Keep the shared header in normal flow on this page.
+   This does NOT change header.css or other pages.
+*/
+
+body:has(main.about-page) > header[data-header] {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100%;
+
+    margin: 0;
+
+    transform: none !important;
+}
+
+
+/*
+   Keep shared footer in normal document flow.
+*/
+
+main.about-page + footer[data-footer] {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    transform: none !important;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.about-page .about-hero {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        320px;
+
+    align-items: center;
+
+    gap: 40px;
+
+    width: 100%;
+
+    min-height: 285px;
+
+    margin: 0 0 38px;
+}
+
+.about-page .about-hero-content {
+    min-width: 0;
+}
+
+.about-label {
+    display: inline-block;
+
+    margin: 0 0 12px;
+
+    color: #43a047;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+.about-title {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: #172330;
+
+    font-size: clamp(38px, 4.7vw, 58px);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.7px;
+}
+
+.about-title::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin-top: 18px;
+
+    border-radius: 10px;
+
+    background: #43a047;
+}
+
+.about-description {
+    max-width: 650px;
+
+    margin: 22px 0 0;
+
+    color: #5a6672;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ILLUSTRATION
+   ========================================================= */
+
+.about-page .about-hero-visual {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+.about-page .about-hero-illustration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 320px;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    background: transparent;
+
+    border: 0;
+
+    overflow: visible;
+}
+
+.about-page .about-hero-illustration img {
+    display: block;
+
+    width: 320px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/*
+   Support direct image placement too.
+*/
+
+.about-page .about-hero-visual > img {
+    display: block;
+
+    width: 320px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/*
+   Remove old illustration system if it still exists.
+*/
+
+.about-page .about-illustration-mountain,
+.about-page .about-illustration-book,
+.about-page .about-art-mountain,
+.about-page .about-art-book,
+.about-page .about-art-circle,
+.about-page .about-hero-art {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MISSION + VISION
+   ========================================================= */
+
+.about-page .about-purpose {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+
+    margin: 0 0 46px;
+
+    overflow: hidden;
+
+    border: 1px solid #e3e8ec;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 6px 24px rgba(22, 36, 48, 0.06);
+}
+
+.about-purpose-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    min-width: 0;
+    min-height: 145px;
+
+    padding: 28px 32px;
+
+    box-sizing: border-box;
+}
+
+.about-purpose-card + .about-purpose-card {
+    border-left: 1px solid #e3e8ec;
+}
+
+.about-purpose-icon {
+    display: flex;
+
+    flex: 0 0 66px;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    border-radius: 50%;
+
+    background: #edf8ef;
+
+    color: #43a047;
+
+    font-size: 24px;
+}
+
+.about-purpose-content {
+    min-width: 0;
+}
+
+.about-purpose-title {
+    margin: 0 0 7px;
+
+    color: #172330;
+
+    font-size: 20px;
+
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+.about-purpose-text {
+    margin: 0;
+
+    color: #5a6672;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TEAM HEADER
+   ========================================================= */
+
+.about-team {
+    width: 100%;
+}
+
+.about-team-header {
+    max-width: 700px;
+
+    margin: 0 auto 27px;
+
+    text-align: center;
+}
+
+.about-section-label {
+    display: inline-block;
+
+    margin: 0 0 8px;
+
+    color: #43a047;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+.about-team-title {
+    margin: 0;
+
+    color: #172330;
+
+    font-size: clamp(28px, 3vw, 35px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.about-team-description {
+    max-width: 620px;
+
+    margin: 10px auto 0;
+
+    color: #65717d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+.about-team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+.about-team-card {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+
+    padding: 27px 20px 22px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e3e8ec;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(22, 36, 48, 0.055);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.about-team-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(22, 36, 48, 0.09);
+}
+
+
+/* =========================================================
+   TEAM PHOTO
+   ========================================================= */
+
+.about-team-photo {
+    flex: 0 0 auto;
+
+    width: 108px;
+    height: 108px;
+
+    margin: 0 0 15px;
+
+    overflow: hidden;
+
+    border: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #edf1f3;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.about-team-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   TEAM TEXT
+   ========================================================= */
+
+.about-team-name {
+    width: 100%;
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+
+    color: #172330;
+
+    font-size: 17px;
+
+    font-weight: 750;
+
+    line-height: 1.35;
+}
+
+.about-team-role {
+    width: 100%;
+
+    margin: 5px 0 10px;
+
+    overflow-wrap: anywhere;
+
+    color: #43a047;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.about-team-bio {
+    width: 100%;
+
+    min-height: 65px;
+
+    margin: 0;
+
+    color: #64707b;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.about-team-socials {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: 16px;
+}
+
+.about-team-socials a {
+    display: inline-flex;
+
+    flex: 0 0 auto;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 7px;
+
+    color: #596671;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.about-team-socials a svg {
+    display: block;
+
+    width: 17px;
+    height: 17px;
+}
+
+.about-team-socials a:hover {
+    color: #43a047;
+
+    background: #edf8ef;
+
+    transform: translateY(-2px);
+}
+
+.about-team-socials a.linkedin:hover {
+    color: #0a66c2;
+
+    background: #edf4fb;
+}
+
+.about-team-socials a.email:hover {
+    color: #43a047;
+
+    background: #edf8ef;
+}
+
+.about-team-socials a:focus-visible {
+    outline: 2px solid #43a047;
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   CLOSING MESSAGE
+   ========================================================= */
+
+.about-closing {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 28px 0 0;
+
+    padding: 21px 26px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe9e1;
+
+    border-radius: 12px;
+
+    background: #f4faf5;
+}
+
+.about-closing-icon {
+    display: flex;
+
+    flex: 0 0 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #e4f3e6;
+
+    color: #43a047;
+
+    font-size: 20px;
+}
+
+.about-closing-content {
+    min-width: 0;
+}
+
+.about-closing-content h2 {
+    margin: 0 0 4px;
+
+    color: #1b2a21;
+
+    font-size: 17px;
+
+    font-weight: 750;
+
+    line-height: 1.4;
+}
+
+.about-closing-content p {
+    margin: 0;
+
+    color: #617069;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark .about-page {
+    background: var(--bg-color, #1B1A17);
+
+    color: var(--text-color, #e8edf1);
+}
+
+.dark .about-title,
+.dark .about-purpose-title,
+.dark .about-team-title,
+.dark .about-team-name,
+.dark .about-closing-content h2 {
+    color: #f1f5f7;
+}
+
+.dark .about-description,
+.dark .about-purpose-text,
+.dark .about-team-description,
+.dark .about-team-bio,
+.dark .about-closing-content p {
+    color: #aeb9c3;
+}
+
+.dark .about-purpose,
+.dark .about-team-card {
+    border-color: #293640;
+
+    background: #25231F;
+
+    box-shadow:
+        0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.dark .about-purpose-card + .about-purpose-card {
+    border-left-color: #293640;
+}
+
+.dark .about-purpose-icon {
+    background: #203728;
+
+    color: #5bc560;
+}
+
+.dark .about-team-photo {
+    border-color: #17212b;
+
+    background: #26333d;
+}
+
+.dark .about-team-socials a {
+    color: #aeb9c3;
+}
+
+.dark .about-team-socials a:hover {
+    color: #5bc560;
+
+    background: #203728;
+}
+
+.dark .about-team-socials a.linkedin:hover {
+    color: #55a8e5;
+
+    background: #182d3f;
+}
+
+.dark .about-team-socials a.email:hover {
+    color: #5bc560;
+
+    background: #203728;
+}
+
+.dark .about-closing {
+    border-color: #294333;
+
+    background: #152219;
+}
+
+.dark .about-closing-icon {
+    background: #203728;
+
+    color: #5bc560;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    main.about-page {
+        padding: 38px 0 50px;
+    }
+
+    .about-container {
+        width: calc(100% - 32px);
+    }
+
+    .about-page .about-hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            230px !important;
+
+        gap: 28px;
+
+        min-height: 260px;
+    }
+
+    .about-title {
+        font-size: clamp(36px, 5vw, 50px);
+    }
+
+    .about-page .about-hero-illustration,
+    .about-page .about-hero-illustration img,
+    .about-page .about-hero-visual > img {
+        width: 230px;
+    }
+
+    .about-purpose-card {
+        padding: 25px 23px;
+    }
+
+    .about-team-grid {
+        gap: 15px;
+    }
+
+    .about-team-card {
+        padding: 23px 14px 19px;
+    }
+
+    .about-team-photo {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /*
+       IMPORTANT:
+       Illustration remains BESIDE the text.
+    */
+
+    .about-page .about-hero {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            190px !important;
+
+        align-items: center;
+
+        gap: 15px;
+
+        min-height: 0;
+
+        margin-bottom: 32px;
+    }
+
+    .about-page .about-hero-content {
+        min-width: 0;
+
+        text-align: left;
+    }
+
+    .about-page .about-hero-visual {
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-page .about-hero-illustration,
+    .about-page .about-hero-illustration img,
+    .about-page .about-hero-visual > img {
+        width: 190px !important;
+
+        max-width: 100%;
+    }
+
+
+    /* Mission / Vision */
+    .about-page .about-purpose {
+        grid-template-columns: 1fr;
+    }
+
+    .about-purpose-card {
+        min-height: 125px;
+    }
+
+    .about-purpose-card + .about-purpose-card {
+        border-top: 1px solid #e3e8ec;
+
+        border-left: 0;
+    }
+
+    .dark .about-purpose-card + .about-purpose-card {
+        border-top-color: #293640;
+
+        border-left: 0;
+    }
+
+
+    /* Team remains three columns */
+    .about-team-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .about-team-photo {
+        width: 86px;
+        height: 86px;
+    }
+
+    .about-team-name {
+        font-size: 15px;
+    }
+
+    .about-team-role {
+        font-size: 12px;
+    }
+
+    .about-team-bio {
+        min-height: 82px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    main.about-page {
+        padding: 25px 0 40px;
+    }
+
+    .about-container {
+        width: calc(100% - 22px);
+    }
+
+
+    /*
+       IMPORTANT:
+       DO NOT use display:block here.
+
+       The illustration stays beside the text.
+    */
+
+    .about-page .about-hero {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            140px !important;
+
+        align-items: center;
+
+        gap: 8px;
+
+        min-height: 0;
+
+        margin-bottom: 28px;
+    }
+
+    .about-page .about-hero-content {
+        min-width: 0;
+
+        text-align: left;
+    }
+
+    .about-label {
+        margin-bottom: 8px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.6px;
+    }
+
+    .about-title {
+        max-width: none;
+
+        font-size: 28px;
+
+        line-height: 1.12;
+
+        letter-spacing: -0.7px;
+    }
+
+    .about-title::after {
+        width: 39px;
+
+        height: 3px;
+
+        margin-top: 12px;
+    }
+
+    .about-description {
+        max-width: none;
+
+        margin-top: 12px;
+
+        font-size: 11.5px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Mobile illustration */
+    .about-page .about-hero-visual {
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-page .about-hero-illustration {
+        width: 140px !important;
+
+        max-width: 100%;
+    }
+
+    .about-page .about-hero-illustration img {
+        width: 140px !important;
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+    .about-page .about-hero-visual > img {
+        width: 140px !important;
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+
+    /* Mission / Vision */
+    .about-page .about-purpose {
+        margin-bottom: 34px;
+
+        border-radius: 11px;
+    }
+
+    .about-purpose-card {
+        display: grid;
+
+        grid-template-columns:
+            50px
+            minmax(0, 1fr);
+
+        align-items: center;
+
+        gap: 12px;
+
+        min-height: 0;
+
+        padding: 18px 14px;
+    }
+
+    .about-purpose-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 19px;
+    }
+
+    .about-purpose-title {
+        margin-bottom: 5px;
+
+        font-size: 16px;
+    }
+
+    .about-purpose-text {
+        font-size: 11.5px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Team */
+    .about-team-header {
+        margin-bottom: 20px;
+    }
+
+    .about-section-label {
+        font-size: 10px;
+    }
+
+    .about-team-title {
+        font-size: 24px;
+    }
+
+    .about-team-description {
+        margin-top: 8px;
+
+        padding: 0 5px;
+
+        font-size: 12px;
+    }
+
+    .about-team-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    .about-team-card {
+        padding: 14px 5px 10px;
+
+        border-radius: 9px;
+    }
+
+    .about-team-photo {
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 8px;
+
+        border-width: 3px;
+    }
+
+    .about-team-name {
+        font-size: 10.5px;
+
+        line-height: 1.3;
+    }
+
+    .about-team-role {
+        margin: 4px 0 6px;
+
+        font-size: 8.5px;
+
+        line-height: 1.3;
+    }
+
+    .about-team-bio {
+        min-height: 95px;
+
+        font-size: 8.5px;
+
+        line-height: 1.45;
+    }
+
+    .about-team-socials {
+        gap: 2px;
+
+        margin-top: 9px;
+    }
+
+    .about-team-socials a {
+        width: 25px;
+        height: 25px;
+
+        border-radius: 5px;
+
+        font-size: 12px;
+    }
+
+    .about-team-socials a svg {
+        width: 14px;
+        height: 14px;
+    }
+
+
+    /* Closing */
+    .about-closing {
+        gap: 10px;
+
+        margin-top: 18px;
+
+        padding: 14px;
+    }
+
+    .about-closing-icon {
+        flex: 0 0 35px;
+
+        width: 35px;
+        height: 35px;
+
+        font-size: 14px;
+    }
+
+    .about-closing-content h2 {
+        font-size: 13px;
+    }
+
+    .about-closing-content p {
+        font-size: 10.5px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-container {
+        width: calc(100% - 16px);
+    }
+
+
+    /*
+       Illustration STILL stays beside text.
+    */
+
+    .about-page .about-hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            115px !important;
+
+        gap: 5px;
+    }
+
+    .about-title {
+        font-size: 24px;
+    }
+
+    .about-description {
+        font-size: 10.5px;
+    }
+
+    .about-page .about-hero-illustration,
+    .about-page .about-hero-illustration img,
+    .about-page .about-hero-visual > img {
+        width: 115px !important;
+
+        max-width: 100%;
+    }
+
+
+    /* Mission / Vision */
+    .about-purpose-card {
+        grid-template-columns:
+            45px
+            minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding: 16px 11px;
+    }
+
+    .about-purpose-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 17px;
+    }
+
+    .about-purpose-title {
+        font-size: 15px;
+    }
+
+    .about-purpose-text {
+        font-size: 11px;
+    }
+
+
+    /* Team */
+    .about-team-grid {
+        gap: 4px;
+    }
+
+    .about-team-card {
+        padding: 11px 4px 8px;
+    }
+
+    .about-team-photo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .about-team-name {
+        font-size: 9.5px;
+    }
+
+    .about-team-role {
+        font-size: 7.5px;
+    }
+
+    .about-team-bio {
+        min-height: 100px;
+
+        font-size: 7.5px;
+    }
+}
+
+
+/* =========================================================
+   EXTREMELY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 330px) {
+
+    /*
+       Keep illustration beside text even here.
+    */
+
+    .about-page .about-hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            95px !important;
+
+        gap: 4px;
+    }
+
+    .about-title {
+        font-size: 21px;
+    }
+
+    .about-description {
+        font-size: 10px;
+    }
+
+    .about-page .about-hero-illustration,
+    .about-page .about-hero-illustration img,
+    .about-page .about-hero-visual > img {
+        width: 95px !important;
+    }
+
+
+    /*
+       Only the TEAM cards become one column
+       on extremely narrow screens.
+    */
+
+    .about-team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .about-team-card {
+        padding: 18px;
+    }
+
+    .about-team-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-team-name {
+        font-size: 14px;
+    }
+
+    .about-team-role {
+        font-size: 10px;
+    }
+
+    .about-team-bio {
+        min-height: auto;
+
+        max-width: 230px;
+
+        font-size: 10px;
+    }
+
+    .about-team-socials {
+        gap: 8px;
+    }
+
+    .about-team-socials a {
+        width: 30px;
+        height: 30px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-team-card,
+    .about-team-socials a {
+        transition: none;
+    }
+
+    .about-team-card:hover,
+    .about-team-socials a:hover {
+        transform: none;
+    }
+}

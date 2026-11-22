@@ -1,0 +1,71 @@
+.hero {
+    position: relative;
+    padding: 42px 0 24px;
+    background-image: url("../assets/images/poster1.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    min-height: 400px;
+}
+
+/* Notices button */
+.notices-link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    background: #22303b96;
+    border: 2px solid #000000;
+    border-radius: 999px;
+
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: var(--shadow);
+    transition: background .2s, color .2s, transform .2s;
+}
+
+.notices-link:hover,
+.notices-link:focus-visible{
+    background:#000000ba;
+    color:white;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        min-height: 0;
+        height:160px;
+        padding: 25px 15px 25px;
+        /* पूरा poster देखाउने */
+        background-image: url("../assets/images/poster1.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 150px;
+        box-sizing: border-box;
+    }
+
+    .notices-link {
+        top: 12px;
+        right: 12px;
+        padding: 7px 12px;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+
+}

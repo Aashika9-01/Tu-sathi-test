@@ -1,0 +1,580 @@
+/* =========================================================
+   STUDYHUB NEPAL
+   CONTRIBUTE PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   RIGHT SIDEBAR
+   ========================================================= */
+
+.contribute-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 0;
+
+}
+
+
+
+/* =========================================================
+   CONTRIBUTORS CARD
+
+   NOTE:
+   No background color is specified here.
+   The existing .panel background is used so this
+   matches "Contribute Your Notes".
+   ========================================================= */
+
+.contributors-card {
+
+    padding: 26px 28px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+}
+
+
+.contributors-header {
+
+    margin-bottom: 0;
+
+}
+
+
+.contributors-header h2 {
+
+    margin: 0 0 6px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}
+
+
+.contributors-header p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    opacity: 0.72;
+
+}
+
+
+
+/* =========================================================
+   CONTRIBUTOR LIST
+   ========================================================= */
+
+.contributors-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 28px;
+
+    margin-top: 20px;
+
+    max-height: 245px;
+
+    overflow-y: auto;
+
+    padding-right: 8px;
+
+}
+
+
+.contributors-list ol {
+
+    margin: 0;
+
+    padding-left: 28px;
+
+}
+
+
+.contributors-list li {
+
+    padding: 5px 0;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* =========================================================
+   CONTRIBUTOR SCROLLBAR
+   ========================================================= */
+
+.contributors-list::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.contributors-list::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.contributors-list::-webkit-scrollbar-thumb {
+
+    background: rgba(80, 100, 120, 0.35);
+
+    border-radius: 10px;
+
+}
+
+
+.contributors-list::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(80, 100, 120, 0.55);
+
+}
+
+
+.contributors-list {
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(80, 100, 120, 0.35)
+        transparent;
+
+}
+
+
+
+/* =========================================================
+   SUPPORT CARD
+
+   NOTE:
+   No custom green background here.
+   It uses the same .panel background as the
+   Contribute Your Notes card.
+   ========================================================= */
+
+.bank-support-card {
+
+    padding: 26px 28px;
+
+    border-radius: 14px;
+
+}
+
+
+
+/* =========================================================
+   SUPPORT HEADER
+   ========================================================= */
+
+.bank-support-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+}
+
+
+.bank-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(70, 130, 80, 0.12);
+
+    font-size: 21px;
+
+    line-height: 1;
+
+}
+
+
+.bank-support-header h2 {
+
+    margin: 0 0 6px;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+.bank-support-header p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    opacity: 0.78;
+
+}
+
+
+
+/* =========================================================
+   QR CODE
+   ========================================================= */
+
+.support-qr {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    text-align: center;
+
+}
+
+
+.support-qr img {
+
+    display: block;
+
+    width: 145px;
+
+    height: 145px;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 8px;
+
+}
+
+
+.support-qr p {
+
+    margin: 10px 0 0;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    opacity: 0.7;
+
+}
+
+
+
+/* =========================================================
+   BANK ACCOUNT INFORMATION
+   ========================================================= */
+
+.bank-account-box {
+
+    margin-top: 5px;
+
+    padding: 14px 17px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    border-radius: 10px;
+
+}
+
+
+.account-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 9px 0;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.07);
+
+}
+
+
+.account-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.account-row span {
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    opacity: 0.68;
+
+}
+
+
+.account-row strong {
+
+    text-align: right;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* =========================================================
+   COPY ACCOUNT BUTTON
+   ========================================================= */
+
+.bank-copy-btn {
+
+    margin-top: 15px;
+
+}
+
+
+.bank-copy-btn:disabled {
+
+    cursor: default;
+
+    opacity: 0.75;
+
+}
+
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark .bank-account-box {
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+.dark .account-row {
+
+    border-bottom-color:
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+.dark .contributors-list {
+
+    scrollbar-color:
+        rgba(255, 255, 255, 0.25)
+        transparent;
+
+}
+
+
+.dark .support-qr img {
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contributors-list {
+
+        max-height: 230px;
+
+    }
+
+
+    .support-qr img {
+
+        width: 135px;
+
+        height: 135px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .contributors-list {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 0;
+
+        max-height: 260px;
+
+    }
+
+
+    .contributors-list ol {
+
+        padding-left: 28px;
+
+    }
+
+
+    .account-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+
+    }
+
+
+    .account-row strong {
+
+        text-align: left;
+
+    }
+
+
+    .support-qr {
+
+        margin-top: 18px;
+
+    }
+
+
+    .support-qr img {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .contributors-card,
+    .bank-support-card {
+
+        padding: 20px;
+
+    }
+
+
+    .contributors-header h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .bank-support-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .contributors-header p,
+    .bank-support-header p {
+
+        font-size: 13px;
+
+    }
+
+
+    .contributors-list li {
+
+        font-size: 13px;
+
+    }
+
+
+    .support-qr img {
+
+        width: 135px;
+
+        height: 135px;
+
+    }
+
+}

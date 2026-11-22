@@ -1,0 +1,857 @@
+/* =========================================================
+   COURSE PAGE
+========================================================= */
+
+.course-banner{
+    display:flex;
+    align-items:center;
+    width:100%;
+    box-sizing:border-box;
+
+    padding:22px 26px;
+    margin-bottom:16px;
+
+    background:linear-gradient(105deg,#f7f3ff,#fff);
+
+    border-radius:var(--radius);
+}
+
+.course-info{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    width:100%;
+    min-width:0;
+}
+
+.course-icon{
+    flex:0 0 auto;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#4d9a68;
+
+    font-size:28px;
+}
+
+.course-details{
+    min-width:0;
+}
+
+.course-banner h1{
+    margin:0;
+
+    font:800 27px Poppins;
+
+    line-height:1.25;
+}
+
+.course-fullname{
+    margin:4px 0 0;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.course-description{
+    margin:5px 0 0;
+
+    color:var(--muted);
+
+    max-width:700px;
+
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   HIDE COURSE COUNTERS
+========================================================= */
+
+.course-banner .stats{
+    display:none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.content-grid{
+    display:grid;
+
+    grid-template-columns:290px minmax(0,1fr);
+
+    gap:22px;
+
+    width:100%;
+    min-width:0;
+
+    align-items:start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+    width:100%;
+    min-width:0;
+
+    padding:18px;
+
+    box-sizing:border-box;
+}
+
+.period-selector{
+    width:100%;
+    min-width:0;
+}
+
+.period-selector h3{
+    margin:0 0 12px;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   SEMESTER / YEAR LIST
+========================================================= */
+
+.period-list{
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+    min-width:0;
+
+    gap:4px;
+
+    box-sizing:border-box;
+}
+
+.semester-link{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+    min-width:0;
+
+    box-sizing:border-box;
+
+    padding:10px 12px;
+
+    margin:0;
+
+    border-radius:8px;
+
+    color:var(--muted);
+
+    background:transparent;
+
+    font-size:13px;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.semester-link:hover{
+    background:var(--soft);
+
+    color:var(--text);
+}
+
+.semester-link.active{
+    background:#e3eee8;
+    color:#1B4332;
+    border:1px solid #1B4332;
+    font-weight:700;
+    box-shadow:0 3px 8px rgba(27,67,50,.14);
+}
+
+
+/* =========================================================
+   CONTRIBUTION BOX
+========================================================= */
+
+.contribute-mini{
+    width:100%;
+
+    box-sizing:border-box;
+
+    background:#edf4ff;
+
+    padding:18px;
+
+    margin-top:28px;
+
+    border-radius:9px;
+
+    border:1px solid transparent;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease;
+}
+
+.contribute-mini h4{
+    margin:0;
+
+    font-size:14px;
+
+    color:var(--text);
+}
+
+.contribute-mini p{
+    margin:6px 0 12px;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   DARK MODE — CONTRIBUTION BOX
+========================================================= */
+
+body.dark .contribute-mini{
+    background:#25231F;
+
+    border-color:#35322E;
+
+    color:#F4F1EB;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.12);
+}
+
+body.dark .contribute-mini h4{
+    color:#F4F1EB;
+}
+
+body.dark .contribute-mini p{
+    color:#BDB8AE;
+}
+
+body.dark .contribute-mini .btn{
+    background:#3F6FD9;
+
+    color:#ffffff;
+
+    border-color:#3F6FD9;
+}
+
+body.dark .contribute-mini .btn:hover{
+    background:#4A79E3;
+
+    border-color:#4A79E3;
+
+    color:#ffffff;
+}
+
+/* =========================================================
+   SUBJECT SECTION
+========================================================= */
+
+.subjects-container{
+    width:100%;
+    min-width:0;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+}
+
+.subject-heading{
+    padding:18px 22px 10px;
+}
+
+.subject-heading h2{
+    margin:0 0 5px;
+
+    font-size:21px;
+}
+
+.subject-heading p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   SUBJECT GRID
+========================================================= */
+
+.subject-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:14px;
+
+    width:100%;
+    min-width:0;
+
+    box-sizing:border-box;
+
+    padding:10px 18px 20px;
+}
+
+
+/* =========================================================
+   SUBJECT CARD
+========================================================= */
+
+.subject-card{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    width:100%;
+    min-width:0;
+
+    min-height:105px;
+
+    box-sizing:border-box;
+
+    padding:17px;
+
+    text-align:left;
+
+    text-decoration:none;
+
+    border-radius:var(--radius);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.subject-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(52,67,75,.12);
+}
+
+.subject-card h3{
+    margin:0;
+
+    min-height:auto;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    font-weight:800;
+
+    line-height:1.4;
+
+    overflow-wrap:anywhere;
+}
+
+
+/* =========================================================
+   VIEW RESOURCES
+========================================================= */
+
+.subject-link{
+    margin-top:16px;
+
+    color:var(--blue);
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.subject-card:hover .subject-link{
+    text-decoration:underline;
+}
+
+
+/* Remove old card content */
+
+.subject-resources,
+.resource-link,
+.subject-card .icon{
+    display:none !important;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width:1100px){
+
+    .content-grid{
+        grid-template-columns:250px minmax(0,1fr);
+
+        gap:18px;
+    }
+
+    .subject-grid{
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:850px){
+
+    .course-banner{
+        padding:20px;
+    }
+
+    .course-banner h1{
+        font-size:24px;
+    }
+
+    .content-grid{
+        grid-template-columns:
+            220px minmax(0,1fr);
+
+        gap:16px;
+    }
+
+    .subject-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:12px;
+
+        padding:10px 14px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:700px){
+
+    /* -------------------------
+       COURSE HEADER
+    ------------------------- */
+
+    .course-banner{
+        display:block;
+
+        width:100%;
+
+        padding:17px;
+
+        margin-bottom:12px;
+
+        box-sizing:border-box;
+    }
+
+    .course-info{
+        display:flex;
+
+        align-items:flex-start;
+
+        gap:13px;
+    }
+
+    .course-icon{
+        width:45px;
+        height:45px;
+
+        font-size:22px;
+
+        border-radius:11px;
+    }
+
+    .course-banner h1{
+        font-size:21px;
+    }
+
+    .course-fullname{
+        font-size:12px;
+
+        line-height:1.4;
+    }
+
+    .course-description{
+        font-size:12px;
+
+        line-height:1.5;
+    }
+
+
+    /* -------------------------
+       MAIN LAYOUT
+    ------------------------- */
+
+    .content-grid{
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+        min-width:0;
+
+        gap:12px;
+    }
+
+
+    /* =====================================================
+       IMPORTANT:
+       SEMESTER SELECTOR MUST REMAIN VISIBLE
+    ===================================================== */
+
+    .sidebar{
+        display:block;
+
+        order:1;
+
+        width:100%;
+        min-width:0;
+
+        padding:14px;
+
+        box-sizing:border-box;
+
+        overflow:visible;
+    }
+
+    .period-selector{
+        display:block;
+
+        width:100%;
+        min-width:0;
+    }
+
+    .period-selector h3{
+        display:block;
+
+        margin:0 0 10px;
+
+        font-size:15px;
+    }
+
+
+    /* -------------------------
+       MOBILE PERIOD LIST
+    ------------------------- */
+
+    .period-list{
+        display:flex;
+
+        flex-direction:row;
+
+        align-items:center;
+
+        width:100%;
+        max-width:100%;
+
+        min-width:0;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        gap:7px;
+
+        padding:2px 2px 8px;
+
+        box-sizing:border-box;
+
+        scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
+
+        overscroll-behavior-x:contain;
+    }
+
+    .period-list::-webkit-scrollbar{
+        display:none;
+    }
+
+
+    .semester-link{
+        display:flex;
+
+        flex:0 0 auto;
+
+        align-items:center;
+        justify-content:center;
+
+        width:auto;
+
+        min-width:88px;
+
+        padding:10px 12px;
+
+        margin:0;
+
+        box-sizing:border-box;
+
+        border-radius:8px;
+
+        white-space:nowrap;
+
+        font-size:12px;
+    }
+
+
+    /* Keep the selector arrow if JS adds one */
+
+    .semester-link span{
+        display:inline;
+    }
+
+
+    /* -------------------------
+       CONTRIBUTION
+    ------------------------- */
+
+    .contribute-mini{
+        margin-top:14px;
+
+        padding:14px;
+    }
+
+    .contribute-mini p{
+        font-size:12px;
+    }
+
+
+    /* -------------------------
+       SUBJECT AREA
+    ------------------------- */
+
+    .subjects-container{
+        order:2;
+
+        width:100%;
+        min-width:0;
+
+        overflow:hidden;
+
+        box-sizing:border-box;
+    }
+
+    .subject-heading{
+        padding:15px 15px 8px;
+    }
+
+    .subject-heading h2{
+        font-size:20px;
+    }
+
+    .subject-heading p{
+        font-size:12px;
+    }
+
+
+    /* -------------------------
+       SUBJECT GRID
+    ------------------------- */
+
+    .subject-grid{
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        width:100%;
+        min-width:0;
+
+        gap:10px;
+
+        padding:8px 11px 16px;
+
+        box-sizing:border-box;
+    }
+
+
+    /* -------------------------
+       SUBJECT CARD
+    ------------------------- */
+
+    .subject-card{
+        width:100%;
+        min-width:0;
+
+        min-height:95px;
+
+        padding:15px;
+
+        box-sizing:border-box;
+
+        text-align:left;
+    }
+
+    .subject-card h3{
+        font-size:14px;
+
+        line-height:1.45;
+    }
+
+    .subject-link{
+        margin-top:14px;
+
+        font-size:12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:450px){
+
+    .course-banner{
+        padding:15px;
+    }
+
+    .course-info{
+        gap:11px;
+    }
+
+    .course-icon{
+        width:42px;
+        height:42px;
+
+        font-size:20px;
+    }
+
+    .course-banner h1{
+        font-size:19px;
+    }
+
+    .course-fullname{
+        font-size:11px;
+    }
+
+    .course-description{
+        font-size:11px;
+    }
+
+
+    .sidebar{
+        padding:12px;
+    }
+
+    .period-selector h3{
+        font-size:14px;
+    }
+
+
+    .period-list{
+        gap:6px;
+
+        padding-bottom:7px;
+    }
+
+    .semester-link{
+        min-width:82px;
+
+        padding:9px 10px;
+
+        font-size:11px;
+    }
+
+
+    .subject-heading{
+        padding:13px 13px 7px;
+    }
+
+    .subject-heading h2{
+        font-size:19px;
+    }
+
+
+    .subject-grid{
+        padding-left:9px;
+        padding-right:9px;
+    }
+
+
+    .subject-card{
+        min-height:92px;
+
+        padding:14px;
+    }
+
+    .subject-card h3{
+        font-size:14px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width:350px){
+
+    .course-banner h1{
+        font-size:18px;
+    }
+
+    .course-icon{
+        width:40px;
+        height:40px;
+
+        font-size:19px;
+    }
+
+
+    .semester-link{
+        min-width:76px;
+
+        padding:8px 9px;
+
+        font-size:10px;
+    }
+
+
+    .subject-card{
+        padding:13px;
+    }
+
+}

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================
+         DARK MODE
+    ========================== -->
+
+    <script>
+        (function () {
+
+            const theme = localStorage.getItem("studyhub-theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+
+        })();
+    </script>
+
+
+    <!-- =========================
+         META
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title data-page-title>
+        Contact Us | TU Sathi
+    </title>
+
+
+    <!-- =========================
+         GLOBAL CSS
+    ========================== -->
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Contact page CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+
+<body data-page="contact">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header data-header></header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container section contact-page">
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <span class="contact-eyebrow">
+                    CONTACT US
+                </span>
+
+                <h1 data-contact-title>
+                    Contact Us
+                </h1>
+
+                <h2>
+                    We'd love to hear from you!
+                </h2>
+
+                <p data-contact-description>
+                    Have a question, suggestion, or feedback?
+                    Reach out to us anytime. Our team is always
+                    happy to hear from students and help make
+                    TU Sathi better.
+                </p>
+
+            </div>
+
+
+            <div class="contact-hero-art">
+
+                <div class="contact-envelope">
+                    <span>@</span>
+                </div>
+
+                <div class="contact-paper-plane">
+                    ➤
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT GRID
+        ========================== -->
+
+        <div class="contact-grid">
+
+
+            <!-- =========================
+                 SEND MESSAGE
+            ========================== -->
+
+            <section
+                id="contact-form"
+                class="form-card panel contact-form-card"
+            >
+
+                <div class="contact-card-heading">
+
+                    <div class="contact-heading-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Send Us a Message
+                        </h2>
+
+                        <p>
+                            Fill out the form below and we'll
+                            get back to you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     CONTACT FORM
+                ========================== -->
+
+                <form
+                    id="contactForm"
+                    data-contact-form
+                    method="POST"
+                >
+
+                    <div class="form-grid">
+
+
+                        <!-- Full Name -->
+
+                        <label class="field">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your full name"
+                                required
+                            >
+
+                        </label>
+
+
+                        <!-- Email -->
+
+                        <label class="field">
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="you@email.com"
+                                required
+                            >
+
+                        </label>
+
+
+                        <!-- Subject -->
+
+                        <label class="field full">
+
+                            <span>
+                                Subject
+                            </span>
+
+                            <select
+                                name="subject"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a subject
+                                </option>
+
+                                <option value="general">
+                                    General Question
+                                </option>
+
+                                <option value="feedback">
+                                    Feedback
+                                </option>
+
+                                <option value="notes">
+                                    Notes / Resources
+                                </option>
+
+                                <option value="technical">
+                                    Technical Problem
+                                </option>
+
+                                <option value="contribution">
+                                    Contribution
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <!-- Message -->
+
+                        <label class="field full">
+
+                            <span>
+                                Message
+                            </span>
+
+                            <textarea
+                                name="message"
+                                placeholder="Write your message here..."
+                                rows="6"
+                                required
+                            ></textarea>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Send Button -->
+
+                    <button
+                        class="btn contact-submit-btn"
+                        type="submit"
+                    >
+                        Send Message →
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- =========================
+                 GET IN TOUCH
+            ========================== -->
+
+            <aside class="form-card panel contact-info-card">
+
+
+                <div class="contact-card-heading">
+
+                    <div class="contact-heading-icon">
+                        ✆
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Get in Touch
+                        </h2>
+
+                        <p>
+                            You can also reach us through
+                            the following channels.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-info-item">
+
+                    <div class="contact-info-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a
+                            href="mailto:support@studyhubnepal.com"
+                        >
+                            support@studyhubnepal.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FACEBOOK -->
+
+                <div class="contact-info-item">
+
+                    <div class="contact-info-icon">
+                        f
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Facebook
+                        </strong>
+
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visit our Facebook
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INSTAGRAM -->
+
+                <div class="contact-info-item">
+
+                    <div class="contact-info-icon">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Instagram
+                        </strong>
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Follow us on Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL BUTTONS -->
+
+                <div
+                    class="social contact-social"
+                    data-social-links
+                >
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        title="Facebook"
+                    >
+                        f
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        title="Instagram"
+                    >
+                        ◎
+                    </a>
+
+
+                    <a
+                        href="mailto:support@studyhubnepal.com"
+                        aria-label="Email"
+                        title="Email us"
+                    >
+                        ✉
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer data-footer></footer>
+
+
+    <!-- =========================
+         GLOBAL JAVASCRIPT
+    ========================== -->
+
+    <script
+        type="module"
+        src="js/app.js"
+    ></script>
+
+
+    <!-- =========================
+         CONTACT FORM JAVASCRIPT
+         FRONTEND → BACKEND
+    ========================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                console.log(
+                    "Contact page loaded"
+                );
+
+
+                const apiHost = (typeof window !== "undefined" && window.location && window.location.hostname) ? window.location.hostname : "localhost";
+                const API =
+                    "http://" + apiHost + ":5000/api";
+
+
+                const contactForm =
+                    document.getElementById(
+                        "contactForm"
+                    );
+
+
+                if (!contactForm) {
+
+                    console.error(
+                        "Contact form not found."
+                    );
+
+                    return;
+                }
+
+
+                console.log(
+                    "Contact form found."
+                );
+
+
+                contactForm.addEventListener(
+                    "submit",
+                    async function (event) {
+
+                        /*
+                         * VERY IMPORTANT
+                         * Prevent normal HTML form submission.
+                         * Otherwise browser adds:
+                         * ?name=...&email=...
+                         * to the URL.
+                         */
+
+                        event.preventDefault();
+
+
+                        console.log(
+                            "Contact form submitted."
+                        );
+
+
+                        const formData =
+                            new FormData(
+                                contactForm
+                            );
+
+
+                        const name =
+                            (
+                                formData.get(
+                                    "name"
+                                ) || ""
+                            )
+                            .trim();
+
+
+                        const email =
+                            (
+                                formData.get(
+                                    "email"
+                                ) || ""
+                            )
+                            .trim();
+
+
+                        const subject =
+                            (
+                                formData.get(
+                                    "subject"
+                                ) || ""
+                            )
+                            .trim();
+
+
+                        const message =
+                            (
+                                formData.get(
+                                    "message"
+                                ) || ""
+                            )
+                            .trim();
+
+
+                        /*
+                         * VALIDATION
+                         */
+
+                        if (
+                            !name ||
+                            !email ||
+                            !subject ||
+                            !message
+                        ) {
+
+                            alert(
+                                "Please fill in all fields."
+                            );
+
+                            return;
+                        }
+
+
+                        /*
+                         * BUTTON
+                         */
+
+                        const button =
+                            contactForm.querySelector(
+                                'button[type="submit"]'
+                            );
+
+
+                        const oldText =
+                            button.textContent;
+
+
+                        button.disabled =
+                            true;
+
+
+                        button.textContent =
+                            "Sending...";
+
+
+                        /*
+                         * SEND TO BACKEND
+                         */
+
+                        try {
+
+                            const response =
+                                await fetch(
+                                    `${API}/messages`,
+                                    {
+                                        method: "POST",
+
+                                        headers: {
+                                            "Content-Type":
+                                                "application/json"
+                                        },
+
+                                        body:
+                                            JSON.stringify(
+                                                {
+                                                    name:
+                                                        name,
+
+                                                    email:
+                                                        email,
+
+                                                    subject:
+                                                        subject,
+
+                                                    message:
+                                                        message
+                                                }
+                                            )
+                                    }
+                                );
+
+
+                            /*
+                             * GET JSON RESPONSE
+                             */
+
+                            const result =
+                                await response.json();
+
+
+                            console.log(
+                                "Backend response:",
+                                result
+                            );
+
+
+                            /*
+                             * SUCCESS
+                             */
+
+                            if (
+                                response.ok &&
+                                result.success
+                            ) {
+
+                                alert(
+                                    "Message sent successfully!"
+                                );
+
+
+                                /*
+                                 * CLEAR FORM
+                                 */
+
+                                contactForm.reset();
+
+                            }
+
+
+                            /*
+                             * BACKEND ERROR
+                             */
+
+                            else {
+
+                                alert(
+                                    result.message ||
+                                    "Failed to send message."
+                                );
+
+                            }
+
+                        }
+
+
+                        /*
+                         * CONNECTION ERROR
+                         */
+
+                        catch (error) {
+
+                            console.error(
+                                "Message send error:",
+                                error
+                            );
+
+
+                            alert(
+                                "Unable to connect to server. Please make sure the backend server is running."
+                            );
+
+                        }
+
+
+                        /*
+                         * RESTORE BUTTON
+                         */
+
+                        finally {
+
+                            button.disabled =
+                                false;
+
+
+                            button.textContent =
+                                oldText;
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

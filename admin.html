@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <title>Redirecting | TU Sathi</title>
+    <meta http-equiv="refresh" content="0; url=index.html">
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            // If administrator provides the secret key parameter, redirect to secure portal
+            if (params.get('key') === 'tusathi' || params.get('secret') === 'admin') {
+                window.location.replace('tu-secure-admin.html');
+            } else {
+                // Otherwise redirect unauthorized visitors back to home page
+                window.location.replace('index.html');
+            }
+        })();
+    </script>
+</head>
+<body style="font-family:sans-serif; text-align:center; padding:50px; background:#f8fafc; color:#475569;">
+    <noscript>
+        <p>This page has moved. <a href="index.html" style="color:#2563eb;">Click here to return to Home</a></p>
+    </noscript>
+</body>
+</html>

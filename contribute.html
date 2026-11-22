@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================
+         THEME
+    ========================================== -->
+    <script>
+        const theme = localStorage.getItem("studyhub-theme");
+
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title data-page-title>
+        Contribute Notes | TU Sathi
+    </title>
+
+
+    <!-- =========================================
+         GLOBAL CSS
+    ========================================== -->
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Contribute CSS -->
+    <link rel="stylesheet" href="css/contribute.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header data-header></header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="container section">
+
+        <div class="form-layout">
+
+
+            <!-- =========================================
+                 CONTRIBUTION FORM
+            ========================================== -->
+
+            <section class="form-card panel">
+
+                <h1>
+                    Contribute Your Notes
+                </h1>
+
+                <p>
+                    Help thousands of students by sharing
+                    quality academic resources.
+                </p>
+
+
+                <form
+                    data-contribution-form
+                    enctype="multipart/form-data"
+                    method="post"
+                >
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Full Name -->
+
+                        <label class="field">
+
+                            Full Name
+
+                            <input
+                                type="text"
+                                name="name"
+                                autocomplete="name"
+                                required
+                                placeholder="Your full name"
+                            >
+
+                        </label>
+
+
+
+                        <!-- Email -->
+
+                        <label class="field">
+
+                            Email
+
+                            <input
+                                type="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                placeholder="you@email.com"
+                            >
+
+                        </label>
+
+
+
+                        <!-- College -->
+
+                        <label class="field">
+
+                            College
+
+                            <input
+                                type="text"
+                                name="college"
+                                placeholder="Your college name"
+                            >
+
+                        </label>
+
+
+
+                        <!-- Course -->
+
+                        <label class="field">
+
+                            Course
+
+                            <select
+                                name="course"
+                                data-course-select
+                                required
+                            >
+
+                                <option value="">
+                                    Select course
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Semester / Year -->
+
+                        <label class="field">
+
+                            <span data-period-label>
+                                Semester / Year
+                            </span>
+
+                            <select
+                                name="period"
+                                data-period-select
+                                required
+                                disabled
+                            >
+
+                                <option value="">
+                                    Select period
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Subject -->
+
+                        <label class="field">
+
+                            Subject
+
+                            <select
+                                name="subject"
+                                data-subject-select
+                                required
+                                disabled
+                            >
+
+                                <option value="">
+                                    Select subject
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Resource Title -->
+
+                        <label class="field">
+
+                            Resource Title
+
+                            <input
+                                type="text"
+                                name="title"
+                                required
+                                placeholder="e.g. Unit 1 Notes"
+                            >
+
+                        </label>
+
+
+
+                        <!-- Resource Type -->
+
+                        <label class="field">
+
+                            Resource Type
+
+                            <select
+                                name="type"
+                                required
+                            >
+
+                                <option value="">
+                                    Select type
+                                </option>
+
+                                <option value="notes">
+                                    Notes
+                                </option>
+
+                                <option value="syllabus">
+                                    Syllabus
+                                </option>
+
+                                <option value="papers">
+                                    Board Papers
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- PDF -->
+
+                        <label class="field full">
+
+                            Upload PDF
+
+                            <input
+                                type="file"
+                                name="file"
+                                accept="application/pdf,.pdf"
+                                required
+                            >
+
+                        </label>
+
+
+
+                        <!-- Message -->
+
+                        <label class="field full">
+
+                            Message
+
+                            <textarea
+                                name="message"
+                                placeholder="Tell us about these notes..."
+                            ></textarea>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         PERMISSION
+                    ========================================== -->
+
+                    <label class="check">
+
+                        <input
+                            type="checkbox"
+                            name="permission"
+                            value="accepted"
+                            required
+                        >
+
+                        I confirm these notes belong to me
+                        or I have permission to share them.
+
+                    </label>
+
+
+
+                    <!-- =========================================
+                         SUBMIT
+                    ========================================== -->
+
+                    <button
+                        class="btn"
+                        type="submit"
+                        data-submit-contribution
+                    >
+
+                        Submit Contribution →
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 RIGHT SIDEBAR
+            ========================================== -->
+
+            <aside class="contribute-sidebar">
+
+
+                <!-- =========================================
+                     CONTRIBUTORS
+                ========================================== -->
+
+                <section class="contributors-card panel">
+
+
+                    <div class="contributors-header">
+
+                        <div>
+
+                            <h2>
+                                Our Contributors
+                            </h2>
+
+                            <p>
+                                Students who have shared their
+                                knowledge with TU Sathi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- IMPORTANT:
+                         JS uses data-contributors-list
+                    -->
+
+                    <div
+                        class="contributors-list"
+                        data-contributors-list
+                        aria-live="polite"
+                    >
+
+                        <p class="contributors-loading">
+                            Loading contributors...
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================================
+                     SUPPORT
+                ========================================== -->
+
+                <section class="bank-support-card panel">
+
+
+                    <div class="bank-support-header">
+
+                        <span class="bank-icon">
+                            ♡
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Support TU Sathi
+                            </h2>
+
+                            <p>
+                                Your support helps us maintain
+                                the platform, add new features,
+                                and provide free quality
+                                resources to students across Nepal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QR -->
+
+                    <div class="support-qr">
+
+                        <img
+                            src="assets/images/studyhub-qr.png"
+                            alt="TU Sathi donation QR code"
+                        >
+
+                        <p>
+                            Scan the QR code to support
+                            TU Sathi.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Account -->
+
+                    <div class="bank-account-box">
+
+
+                        <div class="account-row">
+
+                            <span>
+                                Account Holder Name
+                            </span>
+
+                            <strong data-bank-name>
+                                TU Sathi
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="account-row">
+
+                            <span>
+                                Account No.
+                            </span>
+
+                            <strong data-account-number>
+                                01200123456789
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="account-row">
+
+                            <span>
+                                Digital Wallet
+                            </span>
+
+                            <strong data-bank>
+                                eSewa
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Copy -->
+
+                    <button
+                        class="btn ghost bank-copy-btn"
+                        data-copy="01200123456789"
+                        type="button"
+                    >
+
+                        Copy Account Number
+
+                    </button>
+
+
+                </section>
+
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer data-footer></footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="js/app.js"
+    ></script>
+
+    <script
+        type="module"
+        src="js/contribute.js"
+    ></script>
+
+
+</body>
+
+</html>

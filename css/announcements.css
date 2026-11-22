@@ -1,0 +1,331 @@
+/* =========================================================
+   ANNOUNCEMENTS
+========================================================= */
+
+.announcement-list{
+    display:flex;
+    flex-direction:column;
+
+    width:100%;
+
+    gap:9px;
+
+    margin-top:24px;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT CARD
+========================================================= */
+
+.announcement-card{
+    display:flex;
+    align-items:center;
+
+    width:100%;
+    min-width:0;
+
+    box-sizing:border-box;
+
+    gap:16px;
+
+    padding:13px 16px;
+
+    border-radius:11px;
+
+    cursor:pointer;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
+}
+
+.announcement-card:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(52,67,75,.09);
+}
+
+.announcement-card:focus-visible{
+    outline:2px solid var(--primary);
+    outline-offset:2px;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.announcement-date{
+    flex:0 0 82px;
+
+    color:var(--primary);
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:.4px;
+
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.announcement-content{
+    flex:1;
+
+    min-width:0;
+}
+
+.announcement-card h2{
+    margin:0;
+
+    color:var(--text);
+
+    font-size:14px;
+    font-weight:750;
+
+    line-height:1.35;
+
+    overflow-wrap:anywhere;
+}
+
+.announcement-card p{
+    margin:3px 0 0;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.45;
+
+    overflow-wrap:anywhere;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.announcement-arrow{
+    flex:0 0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:26px;
+    height:26px;
+
+    border-radius:7px;
+
+    background:var(--soft);
+
+    color:var(--text);
+
+    font-size:14px;
+    font-weight:700;
+
+    transition:
+        background .18s ease,
+        color .18s ease,
+        transform .18s ease;
+}
+
+.announcement-card:hover .announcement-arrow{
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateX(2px);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .announcement-card{
+    background:#25231F;
+
+    border-color:#35322E;
+}
+
+body.dark .announcement-card:hover{
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.20);
+}
+
+body.dark .announcement-date{
+    color:#A8D5BA;
+}
+
+body.dark .announcement-card h2{
+    color:#F4F1EB;
+}
+
+body.dark .announcement-card p{
+    color:#C9C4BB;
+}
+
+body.dark .announcement-arrow{
+    background:#302D29;
+
+    color:#F4F1EB;
+}
+
+body.dark .announcement-card:hover .announcement-arrow{
+    background:#1B6B4A;
+
+    color:#F4F1EB;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:720px){
+
+    .announcement-list{
+        gap:8px;
+
+        margin-top:20px;
+    }
+
+    .announcement-card{
+        gap:12px;
+
+        padding:12px 14px;
+    }
+
+    .announcement-date{
+        flex:0 0 72px;
+
+        font-size:9px;
+    }
+
+    .announcement-card h2{
+        font-size:13px;
+    }
+
+    .announcement-card p{
+        font-size:10.5px;
+    }
+
+    .announcement-arrow{
+        width:24px;
+        height:24px;
+
+        font-size:13px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:520px){
+
+    .announcement-list{
+        gap:8px;
+
+        margin-top:18px;
+    }
+
+    .announcement-card{
+        display:grid;
+
+        grid-template-columns:auto 1fr auto;
+
+        align-items:center;
+
+        gap:9px;
+
+        padding:11px 12px;
+
+        border-radius:10px;
+    }
+
+    .announcement-date{
+        flex:initial;
+
+        font-size:8.5px;
+
+        letter-spacing:.25px;
+    }
+
+    .announcement-card h2{
+        font-size:12px;
+
+        line-height:1.35;
+    }
+
+    .announcement-card p{
+        margin-top:2px;
+
+        font-size:9.5px;
+
+        line-height:1.4;
+    }
+
+    .announcement-arrow{
+        width:22px;
+        height:22px;
+
+        border-radius:6px;
+
+        font-size:12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .announcement-card{
+        grid-template-columns:1fr auto;
+
+        gap:6px;
+
+        padding:10px 11px;
+    }
+
+    .announcement-date{
+        grid-column:1 / -1;
+
+        font-size:8px;
+    }
+
+    .announcement-content{
+        grid-column:1;
+    }
+
+    .announcement-card h2{
+        font-size:11.5px;
+    }
+
+    .announcement-card p{
+        font-size:9px;
+    }
+
+    .announcement-arrow{
+        grid-column:2;
+        grid-row:2;
+
+        width:21px;
+        height:21px;
+    }
+
+}

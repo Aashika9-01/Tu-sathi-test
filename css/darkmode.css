@@ -1,0 +1,400 @@
+/* =========================================
+   TU Sathi - Warm Charcoal Dark Theme
+   No layout changes, only color overrides
+========================================= */
+
+
+/* Base */
+
+html.dark,
+html.dark body{
+    background:#1B1A17;
+    color:#F4F1EB;
+}
+
+
+
+/* =========================================
+   Navigation
+========================================= */
+
+html.dark .nav{
+    background:#161512;
+}
+
+
+html.dark .nav a{
+    color:#F4F1EB;
+}
+
+
+html.dark .nav a:hover,
+html.dark .nav a.active{
+    color:#5A84E8;
+}
+
+
+
+/* =========================================
+   Footer
+========================================= */
+
+html.dark .footer{
+    background:#141311;
+}
+
+
+html.dark .footer a{
+    color:#D2CCC2;
+}
+
+
+html.dark .footer li a:hover,
+html.dark .footer li a:focus-visible{
+    color:#8EAFE9;
+}
+
+
+html.dark .footer-support{
+    border-color:#35322E;
+}
+
+
+html.dark .copyright{
+    border-color:#35322E;
+    color:#A29B90;
+}
+
+
+
+/* =========================================
+   Hero Section
+========================================= */
+
+html.dark .hero{
+    border-color:#35322E;
+    position: relative;
+    padding: 42px 0 24px;
+    background-image: url("../assets/images/poster1.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    min-height: 400px;
+}
+
+
+/*html.dark .hero p{
+    color:#D2CCC2;
+}
+
+
+html.dark .hero h1 span{
+    color:#5A84E8;
+}
+
+
+html.dark .hero-art{
+    filter:brightness(.82) saturate(.82);
+}*/
+
+
+
+/* =========================================
+   Panels / Cards
+========================================= */
+
+html.dark .panel{
+    background:#25231F;
+    border-color:#35322E;
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
+
+
+
+html.dark .course-banner{
+    background:#292723;
+    border-color:#35322E;
+}
+
+
+
+html.dark .course-card:hover,
+html.dark .subject-card:hover{
+    background:#302D29;
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
+    transform:translateY(-4px);
+}
+
+
+
+/* =========================================
+   Notices
+========================================= */
+
+html.dark .notices-link{
+    background:#000000c7;
+    border-color:#000000;
+    color:#F4F1EB;
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
+
+
+html.dark .notices-link:hover,
+html.dark .notices-link:focus-visible{
+    background:#f6f6f600;
+    color:rgb(6, 6, 6);
+}
+
+
+
+/* =========================================
+   Semester / Notes List
+========================================= */
+
+html.dark .semester-link.active,
+html.dark .note.active{
+    background:#35312C;
+    color:#F4F1EB;
+}
+
+
+html.dark .note:hover{
+    background:#302D29;
+}
+
+
+
+/* =========================================
+   Icons
+========================================= */
+
+html.dark .icon{
+    background:#2D2A26;
+    color:#AFC4ED;
+}
+
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+html.dark .btn{
+
+    background:#3F6FD9;
+    color:white;
+    border-radius:12px;
+    box-shadow:none;
+
+}
+
+
+html.dark .btn:hover{
+
+    background:#5A84E8;
+
+}
+
+
+html.dark .btn:active{
+
+    background:#315CC0;
+
+}
+
+
+
+html.dark .btn.ghost{
+
+    background:#2D2A26;
+    color:#F4F1EB;
+    border:1px solid #44403A;
+
+}
+
+
+
+html.dark .btn.ghost:hover{
+
+    background:#36322D;
+
+}
+
+
+
+/* =========================================
+   Forms
+========================================= */
+
+html.dark .field input,
+html.dark .field select,
+html.dark .field textarea{
+
+    background:#25231F;
+    border-color:#3B3833;
+    color:#F4F1EB;
+    border-radius:12px;
+
+}
+
+
+
+html.dark .field input::placeholder,
+html.dark .field textarea::placeholder{
+
+    color:#8B857B;
+
+}
+
+
+
+html.dark .field input:focus,
+html.dark .field select:focus,
+html.dark .field textarea:focus{
+
+    outline:2px solid #3F6FD9;
+    outline-offset:1px;
+
+}
+
+
+
+/* =========================================
+   Tabs
+========================================= */
+
+html.dark .tabs a.active,
+html.dark .tabs button.active{
+
+    color:#5A84E8;
+    border-color:#3F6FD9;
+
+}
+
+
+
+/* =========================================
+   PDF Viewer
+========================================= */
+
+html.dark .view-only{
+
+    background:#2D2A26;
+    color:#D2CCC2;
+
+}
+
+
+
+html.dark iframe{
+
+    background:#111;
+
+}
+
+
+
+/* =========================================
+   Contribution Page
+========================================= */
+
+html.dark .donation-card,
+html.dark .contrib-art{
+
+    background:#292723;
+
+}
+
+
+
+/* =========================================
+   Announcement
+========================================= */
+
+html.dark .announcement-entry{
+
+    background:#292723;
+    border-color:#35322E;
+
+}
+
+
+
+html.dark .announcement-card span{
+
+    color:#5A84E8;
+
+}
+
+
+
+/* =========================================
+   Breadcrumb
+========================================= */
+
+html.dark .breadcrumb{
+
+    color:#A29B90;
+
+}
+
+
+html.dark .breadcrumb a{
+
+    color:#8EAFE9;
+
+}
+
+
+
+/* =========================================
+   Inputs / Select Dropdown Fix
+========================================= */
+
+html.dark select option{
+
+    background:#25231F;
+    color:#F4F1EB;
+
+}
+
+
+
+/* =========================================
+   Prevent Flash During Page Load
+========================================= */
+
+html.dark-loading,
+html.dark-loading body{
+
+    background:#1B1A17 !important;
+    color:#F4F1EB !important;
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+html.dark .hero{
+        width: 100%;
+        min-height: 0;
+        height:160px;
+        padding: 25px 15px 25px;
+        /* पूरा poster देखाउने */
+        background-image: url("../assets/images/poster1.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 150px;
+        box-sizing: border-box;
+    }
+
+    .notices-link {
+        top: 12px;
+        right: 12px;
+        padding: 7px 12px;
+        font-size: 12px;
+        gap: 5px;
+    }
+}
